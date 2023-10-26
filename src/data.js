@@ -1,15 +1,18 @@
-const movies = [
+import DEFAULT from './default.jpeg'
+
+
+export const movies = [
   {
     id: 1,
     title: "The Shawshank Redemption",
     description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-    thumbnail: "https://www.example.com/thumbnails/shawshank_redemption.jpg"
+    thumbnail: DEFAULT
   },
   {
     id: 2,
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-    thumbnail: "https://www.example.com/thumbnails/godfather.jpg"
+    thumbnail: DEFAULT
   },
   {
     id: 3,
@@ -19,24 +22,22 @@ const movies = [
   },
   {
     id: 4,
-    title: "The Shawshank Redemption",
+    title: "Doctor Who",
     description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-    thumbnail: "https://www.example.com/thumbnails/shawshank_redemption.jpg"
+    thumbnail: DEFAULT
   },
   {
     id: 5,
-    title: "The Godfather: Part II",
+    title: "Captain MARVEL",
     description: "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
-    thumbnail: "https://www.example.com/thumbnails/godfather_part_ii.jpg"
+    thumbnail: DEFAULT
   },
   {
     id: 6,
-    title: "The Lord of the Rings: The Fellowship of the Ring",
+    title: "The Lord of the Rings",
     description: "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-    thumbnail: "https://www.example.com/thumbnails/lotr_fellowship.jpg"
+    thumbnail: DEFAULT
   },
-  // Add more movies here...
+  // Add more movies here in the above format...
 ];
-
-export { movies };
   

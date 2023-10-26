@@ -2,10 +2,12 @@
 import React from 'react';
 
 const MovieCard = ({ movie }) => {
+
+  console.log("MOVIE",movie);
   return (
     <div className="movie-card">
       {/* <img src={movie.thumbnail} alt={movie.title} /> */}
-      <p>{movie.title}</p>
+      <h5>{movie.title}</h5>
       {/* <p>{movie.description}</p> */}
     </div>
   );

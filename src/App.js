@@ -1,7 +1,9 @@
 
 import React from 'react';
+import './App.css';
 import {movies} from './data';
 import MovieCard from './components/MovieCard';
+
 
 console.log (movies);
 
