@@ -18,20 +18,21 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Trailers trove</h1>
-
-        <form onSubmit={handleSearchTrailer}>
-          <input
-            type="search"
-            placeholder="Search for a trailer"
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-          />
-          <button type="submit">Search</button>
-        </form>
+      <header className='header'>
+        <div className='header-content max-center'>
+          <h1>Trailers trove</h1>
+          <form onSubmit={handleSearchTrailer}>
+            <input
+              type="search"
+              placeholder="Search for a trailer"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
       </header>
-      <div className="movie-list">
+      <div className="movie-list max-center">
         {filteredMovies.map((movie, index) => (
           <MovieCard key={index} movie={movie} />
         ))}

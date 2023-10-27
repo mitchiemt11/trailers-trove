@@ -3,11 +3,19 @@ body {
   color: aliceblue;
 }
 
-.movie-list {
+.max-center {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-list {
   display: grid;
   grid-template-columns:   1fr 1fr 1fr 1fr;
   grid-gap: 15px;
