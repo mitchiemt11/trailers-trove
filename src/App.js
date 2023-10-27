@@ -2,22 +2,12 @@ import React from 'react';
 import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
+import DEFAULT_DROP_IMAGE from './default_drop_path.png';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
   const [selectedMovie, setSelectedMovie] = React.useState({});
-
-  console.log("SMMMM:::", selectedMovie)
-
-  // const handleSearchTrailer = (event) => {
-  //   event.preventDefault();
-  //   // Filter movies based on the search term
-  //   const filtered = movies.filter((movie) =>
-  //     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
-  //   );
-  //   setFilteredMovies(filtered);
-  // };
 
   const handleSearchTrailer = (event) => {
     event.preventDefault();
@@ -54,9 +44,13 @@ function App() {
         </div>
       </header>
 
-      <div className='hero'>
-        <div className='hero-content max-center'>
-          <h1>{selectedMovie.title}</h1>
+      <div className='hero' style={{ backgroundImage: `url(${DEFAULT_DROP_IMAGE})` }}>
+        <div className='hero-content max-center' >
+          <button className='play-btn'>
+           Watch Trailer
+          </button>
+          <h1 className='hero-title'>{selectedMovie.title}</h1>
+          <p className='hero-overview'>{selectedMovie.description}</p>
         </div>
       </div>
 
