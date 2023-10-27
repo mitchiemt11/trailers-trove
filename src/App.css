@@ -1,3 +1,62 @@
-.App {
+body {
+  background-color: #000030;
+  color: aliceblue;
+}
+
+.max-center {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns:   1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 15px;
+
+}
+
+.movie-cover {
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero {
+  min-height: 500px;
+  background-position: top center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.play-btn {
+  background-color: #000030;
+  border: 2px solid #000030;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
