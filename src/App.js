@@ -6,6 +6,18 @@ import MovieCard from './components/MovieCard';
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
+  const [selectedMovie, setSelectedMovie] = React.useState({});
+
+  console.log("SMMMM:::", selectedMovie)
+
+  // const handleSearchTrailer = (event) => {
+  //   event.preventDefault();
+  //   // Filter movies based on the search term
+  //   const filtered = movies.filter((movie) =>
+  //     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  //   );
+  //   setFilteredMovies(filtered);
+  // };
 
   const handleSearchTrailer = (event) => {
     event.preventDefault();
@@ -15,6 +27,15 @@ function App() {
     );
     setFilteredMovies(filtered);
   };
+  
+  React.useEffect(() => {
+    // Set the selected movie to the first movie when the component is mounted
+    if (filteredMovies.length > 0) {
+      setSelectedMovie(filteredMovies[0]);
+    } else {
+      setSelectedMovie({});
+    }
+  }, [filteredMovies]);
 
   return (
     <div className="App">
@@ -32,6 +53,13 @@ function App() {
           </form>
         </div>
       </header>
+
+      <div className='hero'>
+        <div className='hero-content max-center'>
+          <h1>{selectedMovie.title}</h1>
+        </div>
+      </div>
+
       <div className="movie-list max-center">
         {filteredMovies.map((movie, index) => (
           <MovieCard key={index} movie={movie} />
