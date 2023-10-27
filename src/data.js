@@ -4,8 +4,8 @@ import DEFAULT from './default.jpeg'
 export const movies = [
   {
     id: 1,
-    title: "The Shawshank Redemption",
-    description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    title: "Creed III",
+    description: "When a childhood friend and former boxing prodigy, Damian (Jonathan Majors), resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face off between former friends is more than just a fight.",
     thumbnail: DEFAULT
   },
   {
@@ -18,12 +18,12 @@ export const movies = [
     id: 3,
     title: "The Dark Knight",
     description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-    thumbnail: "https://www.example.com/thumbnails/dark_knight.jpg"
+    thumbnail: DEFAULT
   },
   {
     id: 4,
-    title: "Doctor Who",
-    description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    title: "Spy Kids: Armageddon",
+    description: "When a game developer unleashes a powerful computer virus, the children of two secret agents must work together to save their parents — and the world.",
     thumbnail: DEFAULT
   },
   {

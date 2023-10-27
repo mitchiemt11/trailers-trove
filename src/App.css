@@ -2,4 +2,19 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+
+  display: grid;
+  grid-template-columns:   1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+}
+
+.movie-cover {
+  width: 100%;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
 }

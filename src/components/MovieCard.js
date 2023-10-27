@@ -6,9 +6,8 @@ const MovieCard = ({ movie }) => {
   console.log("MOVIE",movie);
   return (
     <div className="movie-card">
-      {/* <img src={movie.thumbnail} alt={movie.title} /> */}
-      <h5>{movie.title}</h5>
-      {/* <p>{movie.description}</p> */}
+      <img className='movie-cover' src={movie.thumbnail} alt={movie.title} />
+      <h5 className='movie-title'>{movie.title}</h5>
     </div>
   );
 };
