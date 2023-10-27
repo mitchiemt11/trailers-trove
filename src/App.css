@@ -1,3 +1,8 @@
+body {
+  background-color: #000030;
+  color: aliceblue;
+}
+
 .movie-list {
   max-width: 1000px;
   margin-left: auto;
@@ -6,6 +11,7 @@
   display: grid;
   grid-template-columns:   1fr 1fr 1fr 1fr;
   grid-gap: 15px;
+  padding: 15px;
 
 }
 
