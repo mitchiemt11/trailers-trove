@@ -41,10 +41,13 @@ export const movies = [
   // Add more movies here in the above format...
 
   {
+
     id: 9,
     title: "Percy Jackson and the Olympians",
-
+    description: "A teenager discovers he's the descendant of a Greek god and sets out on an adventure to settle an on-going battle between the gods.",
     thumbnail: DEFAULT
+
+
   },
 ];
   
