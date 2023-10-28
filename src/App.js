@@ -4,11 +4,12 @@ import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import CREED_PATH from './creed_path.png';
 
-
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
   const [selectedMovie, setSelectedMovie] = React.useState({});
+  const [noResults, setNoResults] = React.useState(false);
+
 
   const handleSearchTrailer = (event) => {
     event.preventDefault();
@@ -17,6 +18,7 @@ function App() {
       movie.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredMovies(filtered);
+    setNoResults(filtered.length === 0);
   };
   
   React.useEffect(() => {
@@ -55,15 +57,21 @@ function App() {
         </div>
       </div>
 
-      <div className="movie-list max-center">
-        {filteredMovies.map((movie, index) => (
-          <MovieCard
-            key={index}
-            movie={movie}
-            selectedMovie={setSelectedMovie}
-          />
-        ))}
-      </div>
+      {noResults ? ( // Condition pour afficher le message si noResults est true
+        <div className="no-results">
+          <p>Oops!, No results found</p>
+        </div>
+      ) : (
+        <div className="movie-list max-center">
+          {filteredMovies.map((movie, index) => (
+            <MovieCard
+              key={index}
+              movie={movie}
+              selectedMovie={setSelectedMovie}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
