@@ -44,8 +44,12 @@ export const movies = [
     description: "Arthur must enlist the help of his half-brother Orm in order to protect Atlantis against Black Manta, who has unleashed a devastating weapon in his obsessive quest to avenge his father's death.",
     thumbnail: DEFAULT
   },
-  // Add more movies here in the above format...
-
+  {
+    id: 8,
+    title: "Tiger 3",
+    description: "Following the events of Tiger Zinda Hai, War and Pathaan, Tiger's informed about a new military group that is planning something beyond all imagination. A deeply motivated Aatish Rehman, who has a history of his own with Tiger, takes control of the new military group.",
+    thumbnail: DEFAULT
+  },
   {
 
     id: 9,
@@ -56,4 +60,3 @@ export const movies = [
 
   },
 ];
-  
