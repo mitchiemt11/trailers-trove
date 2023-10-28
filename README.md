@@ -50,7 +50,7 @@ We welcome contributions to Trailers Trove! If you'd like to contribute or repor
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Connect with me.
 
