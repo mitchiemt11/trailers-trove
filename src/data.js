@@ -39,12 +39,15 @@ export const movies = [
     thumbnail: DEFAULT
   },
   // Add more movies here in the above format...
+
   {
 
-    id: 7,
-    title: "Tiger 3",
-    description: "Following the events of Tiger Zinda Hai, War and Pathaan, Tiger's informed about a new military group that is planning something beyond all imagination. A deeply motivated Aatish Rehman, who has a history of his own with Tiger, takes control of the new military group.",
+    id: 9,
+    title: "Percy Jackson and the Olympians",
+    description: "A teenager discovers he's the descendant of a Greek god and sets out on an adventure to settle an on-going battle between the gods.",
     thumbnail: DEFAULT
+
+
   },
 ];
   
