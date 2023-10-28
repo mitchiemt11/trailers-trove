@@ -9,6 +9,10 @@ body {
   margin-right: auto;
 }
 
+.movie-card {
+  cursor: pointer;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -45,6 +49,11 @@ body {
   margin: 0;
   padding: 0;
   text-shadow: 2px 2px 4px #000000;
+}
+
+.hero-content {
+  padding-bottom: 50px;
+  max-width: 70%;
 }
 
 .play-btn {
