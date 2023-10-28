@@ -69,3 +69,9 @@ body {
   cursor: pointer;
   border-radius: 12px;
 }
+
+.no-results {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
