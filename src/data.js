@@ -46,5 +46,11 @@ export const movies = [
     thumbnail: DEFAULT
   },
   
+  {
+    id: 8,
+    title: "Monarch: Legacy of Monsters",
+    description: "Set after the battle between Godzilla and the Titans, revealing that monsters are real, follows one family's journey to uncover its buried secrets and a legacy linking them to Monarch.",
+    thumbnail: DEFAULT
+  },
 ];
   
