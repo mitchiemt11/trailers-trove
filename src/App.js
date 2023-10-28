@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
-import DEFAULT_DROP_IMAGE from './default_drop_path.png';
+import CREED_PATH from './creed_path.png';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -44,7 +44,7 @@ function App() {
         </div>
       </header>
 
-      <div className='hero' style={{ backgroundImage: `url(${DEFAULT_DROP_IMAGE})` }}>
+      <div className='hero' style={{ backgroundImage: `url(${CREED_PATH})` }}>
         <div className='hero-content max-center' >
           <button className='play-btn'>
            Watch Trailer
@@ -56,7 +56,11 @@ function App() {
 
       <div className="movie-list max-center">
         {filteredMovies.map((movie, index) => (
-          <MovieCard key={index} movie={movie} />
+          <MovieCard
+            key={index}
+            movie={movie}
+            selectedMovie={setSelectedMovie}
+          />
         ))}
       </div>
     </div>
