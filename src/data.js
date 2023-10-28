@@ -38,6 +38,12 @@ export const movies = [
     description: "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     thumbnail: DEFAULT
   },
+  {
+  id: 8,
+    title: "Tiger 3",
+    description: "Following the events of Tiger Zinda Hai, War and Pathaan, Tiger's informed about a new military group that is planning something beyond all imagination. A deeply motivated Aatish Rehman, who has a history of his own with Tiger, takes control of the new military group.",
+    thumbnail: DEFAULT
+  },
   // Add more movies here in the above format...
 ];
   
