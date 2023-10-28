@@ -38,6 +38,12 @@ export const movies = [
     description: "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     thumbnail: DEFAULT
   },
+  {
+    id: 7,
+    title: "Aquaman and the Lost Kingdom",
+    description: "Arthur must enlist the help of his half-brother Orm in order to protect Atlantis against Black Manta, who has unleashed a devastating weapon in his obsessive quest to avenge his father's death.",
+    thumbnail: DEFAULT
+  },
   // Add more movies here in the above format...
 
   {
