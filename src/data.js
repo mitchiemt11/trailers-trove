@@ -39,5 +39,11 @@ export const movies = [
     thumbnail: DEFAULT
   },
   // Add more movies here in the above format...
+  {
+    id: 10,
+    title: "Aquaman and the Lost Kingdom",
+    description: "Arthur must enlist the help of his half-brother Orm in order to protect Atlantis against Black Manta, who has unleashed a devastating weapon in his obsessive quest to avenge his father's death.",
+    thumbnail: DEFAULT
+  },
 ];
   
