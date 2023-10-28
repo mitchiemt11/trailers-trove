@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <header className='header'>
         <div className='header-content max-center'>
-          <h1>Trailers trove</h1>
+          <h1>Trailers Trove</h1>
           <form onSubmit={handleSearchTrailer}>
             <input
               type="search"
