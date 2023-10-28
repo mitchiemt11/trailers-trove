@@ -4,6 +4,7 @@ import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import CREED_PATH from './creed_path.png';
 
+
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
