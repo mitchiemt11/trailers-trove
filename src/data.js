@@ -43,7 +43,7 @@ export const movies = [
   {
     id: 9,
     title: "Percy Jackson and the Olympians",
-    description: "Demigod Percy Jackson leads a quest across America to prevent a war among the Olympian gods.",
+
     thumbnail: DEFAULT
   },
 ];
