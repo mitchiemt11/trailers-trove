@@ -39,5 +39,12 @@ export const movies = [
     thumbnail: DEFAULT
   },
   // Add more movies here in the above format...
+
+  {
+    id: 9,
+    title: "Percy Jackson and the Olympians",
+    description: "Demigod Percy Jackson leads a quest across America to prevent a war among the Olympian gods.",
+    thumbnail: DEFAULT
+  },
 ];
   
