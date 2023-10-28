@@ -38,6 +38,7 @@ export const movies = [
     description: "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     thumbnail: DEFAULT
   },
+  
   {
     id: 7,
     title: "Aquaman and the Lost Kingdom",
@@ -52,8 +53,12 @@ export const movies = [
     title: "Percy Jackson and the Olympians",
     description: "A teenager discovers he's the descendant of a Greek god and sets out on an adventure to settle an on-going battle between the gods.",
     thumbnail: DEFAULT
+  },
+  {
 
-
+    id: 10,
+    title: "Monarch: Legacy of Monsters",
+    description: "Set after the battle between Godzilla and the Titans, revealing that monsters are real, follows one family's journey to uncover its buried secrets and a legacy linking them to Monarch.",
   },
 ];
   
