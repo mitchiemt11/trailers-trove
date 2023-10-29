@@ -76,4 +76,43 @@ export const movies = [
     thumbnail: '/thumbnails/mlm_p.png',
     backgroundImage: './thumbnails/mlm_bg.jpeg'
   },
+  {
+
+    id: 11,
+    title: "The Marvels",
+    description: "Marvel's trailer promises a cosmic collision of heroes, villains, and jaw-dropping spectacle that will leave you counting down the seconds until release day",
+    thumbnail: '/thumbnails/tm_p.png',
+    backgroundImage: './thumbnails/tm_b.png'
+  },
+  {
+
+    id: 12,
+    title: "Loki 2",
+    description: "Loki grapples with the multiverse's chaos in Season 2, navigating unpredictable timelines and facing new challenges.",
+    thumbnail: '/thumbnails/loki2_p.png',
+    backgroundImage: './thumbnails/loki2_b.png'
+  },
+  {
+
+    id: 13,
+    title: "Deadpool 3",
+    description: "Deadpool 3 unleashes the Merc with a Mouth on a time-bending escapade, blending chaos, humor, and a dash of reluctant heroism as Wade Wilson faces his wildest ride yet.",
+    thumbnail: '/thumbnails/d3_p.png',
+    backgroundImage: './thumbnails/d3_b.png'
+  },
+  {
+
+    id: 14,
+    title: "Captain America: Brave New World",
+    description: "In Captain America: Brave New World, Steve Rogers grapples with a changed world as he navigates political intrigue and faces unexpected adversaries, all while staying true to his iconic ideals of justice and freedom.",
+    thumbnail: '/thumbnails/canwo_p.png',
+    backgroundImage: './thumbnails/canwo_b.png'
+  },
+  {
+    id: 15,
+    title: "Creepy Crawly",
+    description: "While quarantining at a Thailand hotel, guests begin disappearing with no explanation from staff, leaving the group to wonder whether there may be some truth to local urban legends about a terrifying creature rumored to possess its victims.",
+    thumbnail: '/thumbnails/cc_p.png',
+    backgroundImage: './thumbnails/cc_b.png'
+  },
 ];
