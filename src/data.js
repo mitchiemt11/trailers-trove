@@ -65,4 +65,32 @@ export const movies = [
     description: "Set after the battle between Godzilla and the Titans, revealing that monsters are real, follows one family's journey to uncover its buried secrets and a legacy linking them to Monarch.",
     thumbnail: DEFAULT
   },
+  {
+
+    id: 11,
+    title: "The Marvels",
+    description: "Marvel's trailer promises a cosmic collision of heroes, villains, and jaw-dropping spectacle that will leave you counting down the seconds until release day",
+    thumbnail: DEFAULT
+  },
+  {
+
+    id: 12,
+    title: "Loki 2",
+    description: "Loki grapples with the multiverse's chaos in Season 2, navigating unpredictable timelines and facing new challenges.",
+    thumbnail: DEFAULT
+  },
+  {
+
+    id: 13,
+    title: "Deadpool 3",
+    description: "Deadpool 3 unleashes the Merc with a Mouth on a time-bending escapade, blending chaos, humor, and a dash of reluctant heroism as Wade Wilson faces his wildest ride yet.",
+    thumbnail: DEFAULT
+  },
+  {
+
+    id: 14,
+    title: "Captain America: Brave New World",
+    description: "In Captain America: Brave New World, Steve Rogers grapples with a changed world as he navigates political intrigue and faces unexpected adversaries, all while staying true to his iconic ideals of justice and freedom.",
+    thumbnail: DEFAULT
+  },
 ];
