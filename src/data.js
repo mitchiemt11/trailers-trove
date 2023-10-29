@@ -99,4 +99,10 @@ export const movies = [
     description: "While quarantining at a Thailand hotel, guests begin disappearing with no explanation from staff, leaving the group to wonder whether there may be some truth to local urban legends about a terrifying creature rumored to possess its victims.",
     thumbnail: DEFAULT
   },
+  {
+    id: 16,
+    title: "Sick Girl",
+    description: "A female driven comedy about a woman who feels that she & her friends have grown apart.",
+    thumbnail: DEFAULT
+  },
 ];
