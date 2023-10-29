@@ -93,4 +93,10 @@ export const movies = [
     description: "In Captain America: Brave New World, Steve Rogers grapples with a changed world as he navigates political intrigue and faces unexpected adversaries, all while staying true to his iconic ideals of justice and freedom.",
     thumbnail: DEFAULT
   },
+  {
+    id: 15,
+    title: "Creepy Crawly",
+    description: "While quarantining at a Thailand hotel, guests begin disappearing with no explanation from staff, leaving the group to wonder whether there may be some truth to local urban legends about a terrifying creature rumored to possess its victims.",
+    thumbnail: DEFAULT
+  },
 ];
