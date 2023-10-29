@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
-import CREED_PATH from './creed_path.png';
+
+
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -47,7 +48,7 @@ function App() {
         </div>
       </header>
 
-      <div className='hero' style={{ backgroundImage: `url(${CREED_PATH})` }}>
+      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/creed_path.png'})` }}>
         <div className='hero-content max-center' >
           <button className='play-btn'>
            Watch Trailer
@@ -67,7 +68,7 @@ function App() {
             <MovieCard
               key={index}
               movie={movie}
-              selectedMovie={setSelectedMovie}
+              setSelectedMovie={setSelectedMovie}
             />
           ))}
         </div>
