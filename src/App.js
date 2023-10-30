@@ -37,18 +37,23 @@ function App() {
         <div className='header-content max-center'>
           <h1>Trailers Trove</h1>
           <form onSubmit={handleSearchTrailer}>
-            <input
-              type="search"
-              placeholder="Search for a trailer"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-            />
-            <button type="submit">Search</button>
+            <div className="search-wrapper">
+              <input
+                type="search"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                className="rounded-left-input"
+              />
+              <button type="submit" className="search-button">
+               <i className="fa fa-search"></i>
+              </button>
+            </div>
           </form>
         </div>
       </header>
 
-      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/creed_path.png'})` }}>
+      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
         <div className='hero-content max-center' >
           <button className='play-btn'>
            Watch Trailer
@@ -58,7 +63,7 @@ function App() {
         </div>
       </div>
 
-      {noResults ? ( // Condition pour afficher le message si noResults est true
+      {noResults ? (
         <div className="no-results">
           <p>Oops!, No results found</p>
         </div>
