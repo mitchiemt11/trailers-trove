@@ -90,3 +90,25 @@ button:hover {
   box-shadow: 0 1px 1px rgba(0,0,0,.15), inset 0 0 2px rgba(0,0,0,.05);
   transition: all .07s ease-in-out
 }
+
+.search-wrapper {
+  display: flex;
+}
+
+.rounded-left-input {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.search-button {
+  background-color: #aeb0b1;
+  border: none;
+  padding: 8px 12px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  cursor: pointer;
+}

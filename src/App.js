@@ -37,21 +37,23 @@ function App() {
         <div className='header-content max-center'>
           <h1>Trailers Trove</h1>
           <form onSubmit={handleSearchTrailer}>
-            <div className='search'>
+            <div className="search-wrapper">
               <input
                 type="search"
-                className='search-input'
-                placeholder="Search trailer"
+                placeholder="Search"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
+                className="rounded-left-input"
               />
-            <button type="submit"><i class="fa fa-search"></i></button>
+              <button type="submit" className="search-button">
+               <i className="fa fa-search"></i>
+              </button>
             </div>
           </form>
         </div>
       </header>
 
-      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.thumbnail})` }}>
+      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/creed_path.png'})` }}>
         <div className='hero-content max-center' >
           <button className='play-btn'>
            Watch Trailer
