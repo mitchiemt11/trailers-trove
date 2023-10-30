@@ -53,7 +53,7 @@ function App() {
         </div>
       </header>
 
-      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/creed_path.png'})` }}>
+      <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
         <div className='hero-content max-center' >
           <button className='play-btn'>
            Watch Trailer
