@@ -30,6 +30,17 @@ function App() {
     }
   }, [filteredMovies]);
 
+  const renderTrailer = (trailer) => {
+    const opts = {
+      height: '390',
+      width: '100%',
+      playerVars: {
+        autoplay: 0,
+      },
+    };
+    return <YouTube videoId={trailer} opts={opts} />;
+  }
+
   return (
     <div className="App">
       <header className='header'>
@@ -55,9 +66,7 @@ function App() {
       <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
        { console.log(selectedMovie)}
         <div className='hero-content max-center' >
-          <YouTube 
-
-          />
+          {selectedMovie.trailer ? renderTrailer(selectedMovie.trailer) : null}
           <button className='play-btn' >
            Watch Trailer
           </button>
