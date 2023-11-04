@@ -38,6 +38,7 @@ body {
 }
 
 .hero {
+  position: relative;
   min-height: 700px;
   background-position: top center;
   display: flex;
@@ -111,4 +112,12 @@ button:hover {
   border-bottom-right-radius: 15px;
   color: white;
   cursor: pointer;
+}
+
+.trailer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }

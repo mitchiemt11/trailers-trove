@@ -9,6 +9,7 @@ function App() {
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
   const [selectedMovie, setSelectedMovie] = React.useState({});
   const [noResults, setNoResults] = React.useState(false);
+  const [playTrailer, setPlayTrailer] = React.useState(false);
 
 
   const handleSearchTrailer = (event) => {
@@ -32,13 +33,20 @@ function App() {
 
   const renderTrailer = (trailer) => {
     const opts = {
-      height: '390',
+      height: '100%',
       width: '100%',
       playerVars: {
         autoplay: 0,
       },
     };
-    return <YouTube videoId={trailer} opts={opts} />;
+
+    return (
+      <YouTube
+        videoId={trailer}
+        opts={opts}
+        containerClassName="trailer"
+      />
+    )
   }
 
   return (
@@ -64,10 +72,9 @@ function App() {
       </header>
 
       <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
-       { console.log(selectedMovie)}
         <div className='hero-content max-center' >
-          {selectedMovie.trailer ? renderTrailer(selectedMovie.trailer) : null}
-          <button className='play-btn' >
+          {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
+          <button className='play-btn' onClick={() => setPlayTrailer(true)} >
            Watch Trailer
           </button>
           <h1 className='hero-title'>{selectedMovie.title}</h1>
