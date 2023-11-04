@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
-
-
+import YouTube from 'react-youtube';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -54,8 +53,12 @@ function App() {
       </header>
 
       <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
+       { console.log(selectedMovie)}
         <div className='hero-content max-center' >
-          <button className='play-btn'>
+          <YouTube 
+
+          />
+          <button className='play-btn' >
            Watch Trailer
           </button>
           <h1 className='hero-title'>{selectedMovie.title}</h1>
