@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
-
-
+import YouTube from 'react-youtube';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
   const [selectedMovie, setSelectedMovie] = React.useState({});
   const [noResults, setNoResults] = React.useState(false);
+  const [playTrailer, setPlayTrailer] = React.useState(false);
 
 
   const handleSearchTrailer = (event) => {
@@ -30,6 +30,25 @@ function App() {
       setSelectedMovie({});
     }
   }, [filteredMovies]);
+
+  const renderTrailer = (trailer) => {
+    const opts = {
+      height: '100%',
+      width: '100%',
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+      },
+    };
+
+    return (
+      <YouTube
+        videoId={trailer}
+        opts={opts}
+        containerClassName="trailer"
+      />
+    )
+  }
 
   return (
     <div className="App">
@@ -55,7 +74,12 @@ function App() {
 
       <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
         <div className='hero-content max-center' >
-          <button className='play-btn'>
+          {playTrailer ? <button className='play-btn play-btn--close' onClick={() => setPlayTrailer(false)} >
+              Close
+            </button>
+          : null}
+          {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
+          <button className='play-btn' onClick={() => setPlayTrailer(true)} >
            Watch Trailer
           </button>
           <h1 className='hero-title'>{selectedMovie.title}</h1>
