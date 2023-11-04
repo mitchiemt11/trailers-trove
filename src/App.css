@@ -72,6 +72,13 @@ body {
   border-radius: 12px;
 }
 
+.play-btn--close {
+  position: absolute;
+  z-index: 10;
+  left: 30px;
+  bottom: 30px;
+}
+
 .no-results {
   text-align: center;
   font-size: 2rem;

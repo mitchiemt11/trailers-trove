@@ -73,6 +73,10 @@ function App() {
 
       <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
         <div className='hero-content max-center' >
+          {playTrailer ? <button className='play-btn play-btn--close' onClick={() => setPlayTrailer(false)} >
+              Close
+            </button>
+          : null}
           {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
           <button className='play-btn' onClick={() => setPlayTrailer(true)} >
            Watch Trailer
