@@ -1,6 +1,3 @@
-import DEFAULT from './default.jpeg'
-
-
 
 export const movies = [
   {
@@ -8,14 +5,15 @@ export const movies = [
     title: "Creed III",
     description: "When a childhood friend and former boxing prodigy, Damian (Jonathan Majors), resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face off between former friends is more than just a fight.",
     thumbnail: '/thumbnails/creed3_p.jpeg',
-    backgroundImage: './thumbnails/creed_path.png'
+    backgroundImage: './thumbnails/creed_path.png',
+    trailer: '07gydPrJpP4',
   },
   {
     id: 2,
-    title: "The Godfather",
-    description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-    thumbnail: '/thumbnails/tgf_p.png',
-    backgroundImage: './thumbnails/tgf_b.png'
+    title: "John Wick: Chapter 4",
+    description: "John Wick is on the run for two reasons… he’s being hunted for a global $14 million dollar open contract on his life, and for breaking a central rule: taking a life on Continental Hotel grounds. The victim was a member of the High Table who ordered the open contract. John should have already been executed, except the Continental’s manager, Winston, has given him a one-hour grace period before he’s “Excommunicado” – membership revoked, banned from all services and cut off from other members. John uses the service industry to stay alive as he fights and kills his way out of New York City.",
+    thumbnail: '/thumbnails/john_wick.jpg',
+    backgroundImage: './thumbnails/jw_bg.jpeg',
   },
   {
     id: 3,
@@ -110,9 +108,9 @@ export const movies = [
   },
   {
     id: 15,
-    title: "Creepy Crawly",
-    description: "While quarantining at a Thailand hotel, guests begin disappearing with no explanation from staff, leaving the group to wonder whether there may be some truth to local urban legends about a terrifying creature rumored to possess its victims.",
-    thumbnail: '/thumbnails/cc_p.png',
-    backgroundImage: './thumbnails/cc_b.png'
+    title: "Antman and the Wasp: Quantumania",
+    description: "The movie explores the Quantum Realm in detail and reveals Hope's history with Kang, showcasing her complicated past in this world",
+    thumbnail: '/thumbnails/am.jpeg',
+    backgroundImage: './thumbnails/antman_bg.png'
   },
 ];
