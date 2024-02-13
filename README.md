@@ -8,9 +8,9 @@ Welcome to Trailers Trove, an app designed to provide users with access to the l
 
 - **User-Friendly Interface:** Enjoy a sleek and intuitive interface for easy navigation and seamless browsing of trailers.
 
-- **Customized Experience:** Save your favorite trailers, create watchlists, and receive personalized recommendations based on your viewing history.
+- **Customized Experience:** Save your favourite trailers, create watchlists, and receive personalized recommendations based on your viewing history.
 
-- **Up-to-Date Content:** Stay informed about upcoming releases and newly added trailers to never miss out on the latest in the world of cinema.
+- **Up-to-date Content:** Stay informed about upcoming releases and newly added trailers to never miss out on the latest in the world of cinema.
 
 ## Installation
 
