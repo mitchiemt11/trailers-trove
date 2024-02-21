@@ -36,7 +36,7 @@ yarn install
 yarn start
 ```
 
-🎉🎉🎉🎉 _HAPPY CODING!!!_
+🎉 _HAPPY CODING!!!_
 
 ## Contributing
 
