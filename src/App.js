@@ -12,25 +12,6 @@ function App() {
   const [playTrailer, setPlayTrailer] = React.useState(false);
 
 
-  const trailerRef = React.useRef(null);
-
-
-  React.useEffect(() => {
-    const setTrailerHeight = () => {
-      if (trailerRef.current) {
-        const heroHeight = trailerRef.current.parentElement.offsetHeight;
-        trailerRef.current.style.height = `${heroHeight}px`;
-      }
-    };
-
-    setTrailerHeight();
-    window.addEventListener('resize', setTrailerHeight);
-
-    return () => {
-      window.removeEventListener('resize', setTrailerHeight);
-    };
- }, []);
-
   const handleSearchTrailer = (event) => {
     event.preventDefault();
     // Filter movies based on the search term
@@ -52,7 +33,7 @@ function App() {
 
   const renderTrailer = (trailer) => {
     const opts = {
-      height: '100%',
+      height: 500,
       width: '100%',
       playerVars: {
         autoplay: 1,
@@ -61,10 +42,11 @@ function App() {
     };
 
     return (
-      <div ref={trailerRef} className='trailer'>
+      <div className='trailer'>
         <YouTube
           videoId={trailer}
           opts={opts}
+          className='trailer'
         />
       </div>
     )
