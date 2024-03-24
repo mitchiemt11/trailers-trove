@@ -3,6 +3,7 @@ import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
+import LOGO from './logo.png';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -62,10 +63,10 @@ function App() {
     <div className="App">
       {showLanding ? (
         <div className="landing-section">
-          <h1>Welcome to Trailers Trove</h1>
           <div className="logo-animation">
-            {/* Place your animated logo here */}
+            <img src={LOGO} width={60} height={60} className='image' alt="logo"/>
           </div>
+          <h1>Welcome to Trailers Trove</h1>
           <button className="get-started-btn" onClick={handleGetStarted}>
             Get Started
           </button>

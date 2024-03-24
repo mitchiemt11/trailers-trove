@@ -163,11 +163,27 @@ button:hover {
   margin-top: 20px;
  }
 
- @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+ }
+  40% {
+    transform: translateY(-30px);
+ }
+  60% {
+    transform: translateY(-15px);
+ }
  }
  
  .logo-animation {
-  animation: spin 2s linear infinite;
+  animation: bounce 3s ease infinite;
+  border-radius: 12;
+
+ }
+
+ .image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
  }
