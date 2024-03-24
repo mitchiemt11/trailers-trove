@@ -66,7 +66,8 @@ function App() {
           <div className="logo-animation">
             <img src={LOGO} width={60} height={60} className='image' alt="logo"/>
           </div>
-          <h1>Welcome to Trailers Trove</h1>
+          <h2>Welcome to Trailers Trove</h2>
+          <h3>Your premier destination for the latest and greatest movie trailers!</h3>
           <button className="get-started-btn" onClick={handleGetStarted}>
             Get Started
           </button>
