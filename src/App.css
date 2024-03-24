@@ -147,18 +147,19 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000030; /* Match the background color of your app */
-  color: aliceblue; /* Match the text color of your app */
-  z-index: 1000; /* Ensure the landing section is above other content */
+  background-color: #000030;
+  color: aliceblue;
+  z-index: 1000;
  }
  
  .get-started-btn {
-  background-color: #aeb0b1;
+  background-color: white;
   border: none;
-  padding: 8px 12px;
-  color: white;
+  font-size: 1.7rem;
+  padding:  12px 18px;
+  color: #000030;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 6px;
   margin-top: 20px;
  }
 
