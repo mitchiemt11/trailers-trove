@@ -192,3 +192,11 @@ button:hover {
   padding-left: 23;
   padding-right: 23;
  }
+
+ .footer {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: aliceblue;
+  font-size: 1rem;
+ }
