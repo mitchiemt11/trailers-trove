@@ -12,6 +12,25 @@ function App() {
   const [playTrailer, setPlayTrailer] = React.useState(false);
 
 
+  const trailerRef = React.useRef(null);
+
+
+  React.useEffect(() => {
+    const setTrailerHeight = () => {
+      if (trailerRef.current) {
+        const heroHeight = trailerRef.current.parentElement.offsetHeight;
+        trailerRef.current.style.height = `${heroHeight}px`;
+      }
+    };
+
+    setTrailerHeight();
+    window.addEventListener('resize', setTrailerHeight);
+
+    return () => {
+      window.removeEventListener('resize', setTrailerHeight);
+    };
+ }, []);
+
   const handleSearchTrailer = (event) => {
     event.preventDefault();
     // Filter movies based on the search term
@@ -36,17 +55,18 @@ function App() {
       height: '100%',
       width: '100%',
       playerVars: {
-        autoplay: 0,
+        autoplay: 1,
         controls: 0,
       },
     };
 
     return (
-      <YouTube
-        videoId={trailer}
-        opts={opts}
-        containerClassName="trailer"
-      />
+      <div ref={trailerRef} className='trailer'>
+        <YouTube
+          videoId={trailer}
+          opts={opts}
+        />
+      </div>
     )
   }
 
