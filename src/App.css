@@ -136,3 +136,37 @@ button:hover {
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+.landing-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000030; /* Match the background color of your app */
+  color: aliceblue; /* Match the text color of your app */
+  z-index: 1000; /* Ensure the landing section is above other content */
+ }
+ 
+ .get-started-btn {
+  background-color: #aeb0b1;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 20px;
+ }
+
+ @keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+ }
+ 
+ .logo-animation {
+  animation: spin 2s linear infinite;
+ }
