@@ -54,9 +54,7 @@ function App() {
           videoId={trailer}
           opts={opts}
           className='trailer'
-          events= {
-            onEned={ () => setPlayTrailer(false)}
-          }
+          onEnd={ () => setPlayTrailer(false)}
         />
       </div>
     )
