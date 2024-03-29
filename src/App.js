@@ -3,7 +3,7 @@ import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
-import LOGO from './logo.png';
+import Landing from './Landing';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -63,19 +63,7 @@ function App() {
   return (
     <div className="App">
       {showLanding ? (
-        <div className="landing-section">
-          <div className="logo-animation">
-            <img src={LOGO} width={60} height={60} className='image' alt="logo"/>
-          </div>
-          <h2>🍿 Welcome to Trailers Trove 🍿</h2>
-          <h3>Your premier destination for the latest and greatest movie trailers!</h3>
-          <button className="get-started-btn" onClick={handleGetStarted}>
-            Get Started
-          </button>
-          <div className="footer">
-          Made with {'❤️'} by Mitchell Mutandah
-        </div>
-        </div>
+        <Landing handleGetStarted={handleGetStarted} />
       ) : (
         <>
           <header className='header'>

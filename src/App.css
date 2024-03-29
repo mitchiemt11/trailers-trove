@@ -21,7 +21,7 @@ body {
 
 .movie-list {
   display: grid;
-  grid-template-columns:   1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   padding: 15px;
 
@@ -84,6 +84,7 @@ body {
   font-size: 2rem;
   margin-top: 50px;
 }
+
 button i {
   opacity: .5;
   transition: all .07s ease-in-out
@@ -95,7 +96,7 @@ button:hover i {
 
 button:hover {
   cursor: pointer;
-  box-shadow: 0 1px 1px rgba(0,0,0,.15), inset 0 0 2px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15), inset 0 0 2px rgba(0, 0, 0, .05);
   transition: all .07s ease-in-out
 }
 
@@ -150,53 +151,89 @@ button:hover {
   background-color: #000030;
   color: aliceblue;
   z-index: 1000;
- }
- 
- .get-started-btn {
+}
+
+.get-started-btn {
   background-color: white;
   border: none;
   font-size: 1.7rem;
-  padding:  12px 18px;
+  padding: 12px 18px;
   color: #000030;
   cursor: pointer;
   border-radius: 6px;
   margin-top: 20px;
- }
+}
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
- }
+  }
+
   40% {
     transform: translateY(-30px);
- }
+  }
+
   60% {
     transform: translateY(-15px);
- }
- }
- 
- .logo-animation {
+  }
+}
+
+.logo-animation {
   animation: bounce 3s ease infinite;
   border-radius: 12;
 
- }
+}
 
- .image {
+.image {
   border-radius: 30%;
   object-fit: cover;
- }
+}
 
- .description {
+.description {
   text-emphasis: none;
   text-align: center;
   padding-left: 23;
   padding-right: 23;
- }
+}
 
- .footer {
+.footer {
   position: absolute;
   bottom: 30px;
   right: 30px;
   color: aliceblue;
   font-size: 1rem;
- }
+}
+
+.list {
+  width: '160px';
+  height: '60px';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: '-100px';
+  animation-duration: 300;
+  background-color: 'red';
+
+
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  color: #aeb0b1
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 35;
+  left: 0;
+}
