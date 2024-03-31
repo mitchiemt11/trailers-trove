@@ -9,9 +9,7 @@ body {
   margin-right: auto;
 }
 
-.movie-card {
-  cursor: pointer;
-}
+
 
 .header-content {
   display: flex;
@@ -27,15 +25,9 @@ body {
 
 }
 
-.movie-cover {
-  width: 100%;
-}
 
-.movie-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-}
+
+
 
 .hero {
   position: relative;
