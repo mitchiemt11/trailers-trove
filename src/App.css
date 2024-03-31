@@ -209,25 +209,66 @@ button:hover {
   font-size: 1rem;
 }
 
-.list {
-  width: '160px';
-  height: '60px';
+.list1 {
+  width: 160px;
+  border-radius: 0.5rem;
+  height: 60px;
+  background-color: #1d4ed8;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: '-100px';
-  animation-duration: 300;
-  background-color: 'red';
+  margin-left: -100px;
+  transition-duration: 300ms;
+}
 
+.list2 {
+  width: 160px;
+  border-radius: 0.5rem;
+  height: 60px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -100px;
+  transition-duration: 300ms;
+}
+
+.list3 {
+  width: 160px;
+  border-radius: 0.5rem;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -100px;
+  transition-duration: 300ms;
+}
+
+.list1:hover {
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.list2:hover {
+  margin-left: -10px;
+  cursor: pointer;
 
 }
+.list3:hover {
+  margin-left: -10px;
+  cursor: pointer;
+
+}
+
+
 
 .link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: auto;
-  color: #aeb0b1
+  color: #E0E0E0
 }
 
 .container {

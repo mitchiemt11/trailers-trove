@@ -1,5 +1,8 @@
 import React from 'react';
 import LOGO from './logo.png';
+import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+import {HiOutlineMail} from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 function Landing({ handleGetStarted }) {
   return (
@@ -16,18 +19,20 @@ function Landing({ handleGetStarted }) {
       {/** Social links */}
       <div className='container'>
         <ul>
-          <li className='list'>
+          <li className='list1'>
             <a  className="link" href="https://www.linkedin.com/feed/" target='_blank' rel="noreferrer">
-              LinkedIn
+              LinkedIn <FaLinkedin size={30} />
             </a>
           </li>
-          <li className='list'>
+          <li className='list2'>
             <a className="link" href="https://github.com/mitchiemt11" target='_blank' rel="noreferrer">
-              Github
+              Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='list'>
-            <a className="link" href='https://dev.to/mitchiemt11' target='_blank' rel="noreferrer">Dev</a>
+          <li className='list3'>
+            <a className="link" href='https://dev.to/mitchiemt11' target='_blank' rel="noreferrer">
+              Dev <HiOutlineMail size={30} />
+            </a>
           </li>
         </ul>
       </div>
