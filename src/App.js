@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
@@ -49,36 +48,36 @@ function App() {
     };
 
     return (
-      <div className='trailer'>
+      <div className='absolute left-0 top-0 right-0 bottom-0 w-full h-full'>
         <YouTube
           videoId={trailer}
           opts={opts}
-          className='trailer'
-          onEnd={ () => setPlayTrailer(false)}
+          className='absolute left-0 top-0 right-0 bottom-0 w-full h-full'
+          onEnd={() => setPlayTrailer(false)}
         />
       </div>
     )
   }
 
   return (
-    <div className="App">
+    <div>
       {showLanding ? (
         <Landing handleGetStarted={handleGetStarted} />
       ) : (
         <>
-          <header className='header'>
-            <div className='header-content max-center'>
-              <h1>Trailers Trove</h1>
+          <header>
+            <div className='flex justify-between items-center max-w-[1000px] ml-0 mr-0 '>
+              <div className='text-xl'>Trailers Trove</div>
               <form onSubmit={handleSearchTrailer}>
-                <div className="search-wrapper">
+                <div className="flex">
                   <input
                     type="search"
                     placeholder="Search"
                     value={searchTerm}
                     onChange={(event) => setSearchTerm(event.target.value)}
-                    className="rounded-left-input"
+                    className="rounded-t-l-lg rounded-b-l-lg border-solid border-[#ccc] p-10 w-full focus:outline-none"
                   />
-                  <button type="submit" className="search-button">
+                  <button type="submit" className="bg-[#aeb0b1] border-none px-8 py-12 border-t-r-lg border-b-r-lg text-white cursor-pointer">
                     <i className="fa fa-search"></i>
                   </button>
                 </div>
@@ -86,26 +85,26 @@ function App() {
             </div>
           </header>
 
-          <div className='hero' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
-            <div className='hero-content max-center' >
-              {playTrailer ? <button className='play-btn play-btn--close' onClick={() => setPlayTrailer(false)} >
+          <div className='relative min-h-[500px] bg-center flex items-end bg-cover' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
+            <div className='pb-[60px] max-w-[1000px] ml-0 mr-0' >
+              {playTrailer ? <button className='bg-[#000030] border-solid border-[#000030] text-white px-15 py-15 decoration-none inline-block text-[1.2rem] mt-4 mb-2 cursor-pointer rounded-lg absolute z-10 left-[30px] bott-[30px]' onClick={() => setPlayTrailer(false)} >
                 Close
               </button>
                 : null}
               {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
-              <button className='play-btn' onClick={() => setPlayTrailer(true)} >
+              <button className='bg-[#000030] border-solid border-[#000030] text-white px-15 py-15 decoration-none inline-block text-[1.2rem] mt-4 mb-2 cursor-pointer rounded-lg' onClick={() => setPlayTrailer(true)} >
                 Watch Trailer
               </button>
-              <h1 className='hero-title'>{selectedMovie.title}</h1>
-              <p className='hero-overview'>{selectedMovie.description}</p>
+              <h1 className='text-[3rem] m-0 p-0 drop-shadow-lg'>{selectedMovie.title}</h1>
+              <p className='text-[aliceblue] text-[1.2] font-medium'>{selectedMovie.description}</p>
             </div>
           </div>
           {noResults ? (
-            <div className="no-results">
+            <div className="text-center text-[2rem] mt-[50px]">
               <p>Oops!, No results found</p>
             </div>
           ) : (
-            <div className="movie-list max-center">
+            <div className="grid gap-[15px] p-[15px] grid-cols max-w-[1000px] mx-auto my-auto">
               {filteredMovies.map((movie, index) => (
                 <MovieCard
                   key={index}
