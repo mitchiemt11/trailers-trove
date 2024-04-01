@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #000030;
-  color: aliceblue;
+body {}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  body {
+    @apply font-[Raleway];
+    background-color: #000030;
+    color: aliceblue;
+  }
+
+  li {
+    @apply p-4;
+    @apply cursor-pointer;
+  }
 }

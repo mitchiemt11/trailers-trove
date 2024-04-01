@@ -1,5 +1,4 @@
 import React from 'react';
-import LOGO from './logo.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -8,14 +7,14 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 function Landing({ handleGetStarted }) {
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#000030] text-[aliceblue] z-[1000]">
-      <div className="rounded-lg">
-        <img src={LOGO} width={60} height={60} className='rounded-lg object-cover' alt="logo" />
-      </div>
-      <h2>🍿 Welcome to Trailers Trove 🍿</h2>
-      <h3>Your premier destination for the latest and greatest movie trailers!</h3>
-      <button className="bg-white border-none text-[1.4rem] text-[#000030] cursor-pointer rounded mt-20" onClick={handleGetStarted}>
+      <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-[aliceblue] md:text-5xl lg:text-6xl dark:text-white"> 🍿 Welcome to Trailers Trove 🍿 </h1>
+      <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Your premier destination for the latest and greatest movie trailers!</p>
+      <buttton onClick={handleGetStarted} className="cursor-pointer inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
         Get Started
-      </button>
+        <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+        </svg>
+      </buttton>
 
       {/** Social links */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
