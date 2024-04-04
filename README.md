@@ -43,10 +43,10 @@ yarn start
 We welcome contributions to Trailers Trove! If you'd like to contribute or report issues, please follow these guidelines:
 
 1. Fork the repository.
-2. Create your branch: `git checkout -b feature/YourFeature`.
-3. Commit your changes: `git commit -m 'Add YourFeature'`.
-4. Push to the branch: `git push origin feature/YourFeature`.
-5. Submit a pull request.
+2. Create your branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add YourFeature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Submit a pull request
 
 ## License
 
