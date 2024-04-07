@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
+import { HiBookOpen, HiPencil, HiPencilAlt } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 
@@ -40,7 +40,7 @@ function Landing({ handleGetStarted }) {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-700 rounded-lg'>
             <a className='flex justify-between items-center w-full text-gray-300'
               href="https://dev.to/mitchiemt11" target='_blank' rel="noreferrer">
-              DEV <HiOutlineMail size={30} />
+              DEV <HiPencilAlt size={30} />
             </a>
           </li>
         </ul>
