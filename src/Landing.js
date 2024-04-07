@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiBookOpen, HiPencil, HiPencilAlt } from 'react-icons/hi'
+import { HiPencilAlt } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 
