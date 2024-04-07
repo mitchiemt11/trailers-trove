@@ -21,7 +21,7 @@ function Landing({ handleGetStarted }) {
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-700 rounded-lg'>
             <a className='flex justify-between items-center w-full text-gray-300 '
-              href="https://www.linkedin.com/feed/" target='_blank' rel="noreferrer">
+              href="https://www.linkedin.com/in/mitchell-mutandah-5726aa212/" target='_blank' rel="noreferrer">
               LinkedIn <FaLinkedin size={30} />
             </a>
           </li>
@@ -31,16 +31,16 @@ function Landing({ handleGetStarted }) {
               GitHub <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-700 rounded-lg'>
-            <a className='flex justify-between items-center w-full text-gray-300'
-              href="https://mail.google.com/mail/u/0/#inbox" target='_blank' rel="noreferrer">
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-green-600 rounded-lg'>
             <a className='flex justify-between items-center w-full text-gray-300'
-              href="/">
-              Resume <BsFillPersonLinesFill size={30} />
+              href="https://medium.com/@mitchiemt11">
+              Medium <BsFillPersonLinesFill size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-700 rounded-lg'>
+            <a className='flex justify-between items-center w-full text-gray-300'
+              href="https://dev.to/mitchiemt11" target='_blank' rel="noreferrer">
+              DEV <HiOutlineMail size={30} />
             </a>
           </li>
         </ul>
