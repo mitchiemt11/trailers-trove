@@ -2,9 +2,12 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiPencilAlt } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 
 function Landing({ handleGetStarted }) {
+  const { width, height } = useWindowSize()
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#000030] text-[aliceblue] z-[1000]">
       <h1 className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-[aliceblue] md:text-5xl lg:text-6xl dark:text-white"> 🍿 Welcome to Trailers Trove 🍿 </h1>
@@ -15,6 +18,10 @@ function Landing({ handleGetStarted }) {
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
         </svg>
       </buttton>
+      <Confetti
+      width={width}
+      height={height}
+    />
 
       {/** Social links */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
