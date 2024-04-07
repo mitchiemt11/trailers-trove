@@ -17,8 +17,8 @@ function App() {
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
-    }, 6000);
-    // setShowLanding(false);
+      setShowLanding(false);
+    }, 4000);
    }
 
 
@@ -125,6 +125,3 @@ function App() {
 }
 
 export default App;
-
-
-
