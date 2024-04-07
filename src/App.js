@@ -11,11 +11,15 @@ function App() {
   const [noResults, setNoResults] = React.useState(false);
   const [playTrailer, setPlayTrailer] = React.useState(false);
   const [showLanding, setShowLanding] = React.useState(true);
-
+  const [showConfetti, setShowConfetti] = React.useState(false);
 
   const handleGetStarted = () => {
-    setShowLanding(false);
-  };
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 6000);
+    // setShowLanding(false);
+   }
 
 
   const handleSearchTrailer = (event) => {
@@ -62,7 +66,7 @@ function App() {
   return (
     <div>
       {showLanding ? (
-        <Landing handleGetStarted={handleGetStarted} />
+        <Landing handleGetStarted={handleGetStarted} showConfetti={showConfetti} />
       ) : (
         <>
           <header>

@@ -6,7 +6,7 @@ import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 
-function Landing({ handleGetStarted }) {
+function Landing({ handleGetStarted, showConfetti }) {
   const { width, height } = useWindowSize()
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#000030] text-[aliceblue] z-[1000]">
@@ -18,10 +18,12 @@ function Landing({ handleGetStarted }) {
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
         </svg>
       </buttton>
-      <Confetti
-      width={width}
-      height={height}
-    />
+      {showConfetti && (
+        <Confetti
+          width={width}
+          height={height}
+        />
+      )}
 
       {/** Social links */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
