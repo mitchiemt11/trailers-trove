@@ -105,7 +105,7 @@ function App() {
               </button>
                 : null}
               {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
-              <button  onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900 ${showConfetti'>
+              <button  onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
                 Watch Trailer
               </button>
               <h1 className='text-[3rem] m-0 p-0 drop-shadow-lg'>{selectedMovie.title}</h1>
