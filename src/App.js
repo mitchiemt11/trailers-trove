@@ -100,7 +100,7 @@ function App() {
 
           <div className='relative min-h-[500px] bg-center flex items-end bg-cover' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
             <div className='pb-[60px] max-w-[1000px] ml-auto mr-auto' >
-              {playTrailer ? <button className='bg-[#000030] border-solid border-[#000030] text-white px-15 py-15 decoration-none inline-block text-[1.2rem] mt-4 mb-2 cursor-pointer rounded-lg absolute z-10 left-[30px] bottom-[30px]' onClick={() => setPlayTrailer(false)} >
+              {playTrailer ? <button className='bg-[#000030] hover:bg-red-700 border-solid border-[#000030] text-white px-5 py-2 decoration-none inline-block text-[1.2rem] mt-4 mb-2 cursor-pointer rounded-lg absolute z-10 left-[30px] bottom-[30px]' onClick={() => setPlayTrailer(false)} >
                 Close
               </button>
                 : null}
