@@ -98,7 +98,7 @@ function App() {
             </div>
           </header>
 
-          <div className='relative min-h-[500px] bg-center flex items-end bg-cover' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
+          <div className='relative min-h-[500px] bg-top flex items-end bg-cover' style={{ backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})` }}>
             <div className='pb-[60px] max-w-[1000px] ml-auto mr-auto' >
               {playTrailer ? <button className='bg-[#000030] hover:bg-red-700 border-solid border-[#000030] text-white px-5 py-2 decoration-none inline-block text-[1.2rem] mt-4 mb-2 cursor-pointer rounded-lg absolute z-10 left-[30px] bottom-[30px]' onClick={() => setPlayTrailer(false)} >
                 Close
@@ -108,7 +108,7 @@ function App() {
               <button  onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
                 Watch Trailer
               </button>
-              <h1 className='text-[3rem] m-0 p-0 drop-shadow-lg'>{selectedMovie.title}</h1>
+              <div className='text-[3rem] m-0 p-0 drop-shadow-lg'>{selectedMovie.title}</div>
               <p className='text-[aliceblue] text-[1.2] font-medium'>{selectedMovie.description}</p>
             </div>
           </div>
