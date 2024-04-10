@@ -105,13 +105,14 @@ function App() {
               </button>
                 : null}
               {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
-              <button  onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
+              <button onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
                 Watch Trailer
               </button>
-              <div className='text-[3rem] m-0 p-0 drop-shadow-lg'>{selectedMovie.title}</div>
-              <p className='text-[aliceblue] text-[1.2] font-medium'>{selectedMovie.description}</p>
+              <p className='text-[aliceblue] text-[3rem]'>{selectedMovie.title}</p>
+              <p className='text-[aliceblue] text-[1.3] font-medium'>{selectedMovie.description}</p>
             </div>
           </div>
+
           {noResults ? (
             <div className="text-center text-[2rem] mt-[50px]">
               <p>Oops!, No results found</p>
