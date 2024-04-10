@@ -118,7 +118,7 @@ function App() {
               <p>Oops!, No results found</p>
             </div>
           ) : (
-            <div className="grid gap-[15px] p-[15px] grid-cols max-w-[1000px] mx-auto my-auto">
+            <div className="grid grid-cols-3 gap-[25px] p-[25px] max-w-[1000px] mx-auto my-auto">
               {filteredMovies.map((movie, index) => (
                 <MovieCard
                   key={index}
