@@ -2,7 +2,7 @@ import React from 'react';
 import { movies } from './data';
 import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
-import Landing from './Landing';
+import Landing from './components/Landing';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
