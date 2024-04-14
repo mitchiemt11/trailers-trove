@@ -2,6 +2,18 @@
 
 Welcome to Trailers Trove, an app designed to provide users with access to the latest and most exciting movie trailers. With Trailers Trove, you can explore and enjoy a diverse range of movie previews right at your fingertips.
 
+
+## Preview
+
+![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/bef47c46-adb0-4384-ae07-4de26f009d03)
+
+![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/5b5b301e-d036-4e97-8622-2dcf03f1a913)
+
+![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/042696ae-8643-4c76-9381-9e769211ce9e)
+
+
+
+
 ## Features
 
 - **Extensive Library:** Access a vast collection of the newest and most popular movie trailers across genres, from action-packed blockbusters to heartfelt dramas and everything in between.
