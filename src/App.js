@@ -1,5 +1,5 @@
 import React from 'react';
-import { movies } from './data';
+import { movies } from './data/data';
 import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
 import Landing from './components/Landing';
