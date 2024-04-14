@@ -4,6 +4,7 @@ import MovieCard from './components/MovieCard';
 import YouTube from 'react-youtube';
 import Landing from './components/Landing';
 import Header from './components/Header';
+import NoResults from './components/NoResults';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -87,9 +88,7 @@ function App() {
           </div>
 
           {noResults ? (
-            <div className="text-center text-[2rem] mt-[50px]">
-              <p>Oops!, No results found</p>
-            </div>
+            <NoResults/>
           ) : (
             <div className="grid grid-cols-3 gap-[25px] p-[25px] max-w-[1000px] mx-auto my-auto">
               {filteredMovies.map((movie, index) => (
