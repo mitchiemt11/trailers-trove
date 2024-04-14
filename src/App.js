@@ -15,6 +15,8 @@ function App() {
   const [showLanding, setShowLanding] = React.useState(true);
   const [showConfetti, setShowConfetti] = React.useState(false);
 
+  const playTrailerButtonRef = React.useRef(null);
+
   const handleGetStarted = () => {
     setShowConfetti(true);
     setTimeout(() => {
@@ -79,7 +81,7 @@ function App() {
               </button>
                 : null}
               {selectedMovie.trailer && playTrailer ? renderTrailer(selectedMovie.trailer) : null}
-              <button onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
+              <button ref={playTrailerButtonRef} onClick={() => setPlayTrailer(true)} className='cursor-pointer border-solid border-[#000030] inline-flex items-center justify-center px-5 py-3 text-[1.2rem] text-base font-medium text-center text-white bg-[#000030] rounded-lg hover:bg-[#001330cf]'>
                 Watch Trailer
               </button>
               <p className='text-[aliceblue] text-[3rem]'>{selectedMovie.title}</p>
