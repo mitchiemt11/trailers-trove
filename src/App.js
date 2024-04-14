@@ -5,6 +5,7 @@ import YouTube from 'react-youtube';
 import Landing from './components/Landing';
 import Header from './components/Header';
 import NoResults from './components/NoResults';
+import Card from './components/Card';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
