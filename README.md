@@ -1,6 +1,6 @@
 # Trailers Trove
 
-Welcome to Trailers Trove, an app designed to provide users with access to the latest and most exciting movie trailers. With Trailers Trove, you can explore and enjoy a diverse range of movie previews right at your fingertips.
+Trailers Trove is an app designed to provide users with access to the latest and most exciting movie trailers. With Trailers Trove, you can explore and enjoy a diverse range of movie previews right at your fingertips.
 
 
 ## Preview
