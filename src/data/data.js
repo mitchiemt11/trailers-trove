@@ -127,13 +127,37 @@ export const movies = [
     backgroundImage: './thumbnails/antman_bg.png',
     trailer: 'ZlNFpri-Y40'
   },
+   {
+    id: 16,
+    title: "Woman of the Hour",
+    description: "A tight true-crime thriller set against the backdrop of a cheesy television game show. This gripping narrative highlights just how strange truth can be, powered by stellar performances and a retro feel that reminds us of the value of modern DNA evidence.",
+    thumbnail: "/thumbnails/womanofthehour.jpeg",
+    backgroundImage: "./thumbnails/womanofthehour_bg.png",
+    trailer: "ODUdpwddTQk"
+  },
+   {
+    id: 17,
+    title: "Deadpool & Wolverine",
+    description: "Deadpool is offered a place in the Marvel Cinematic Universe by the Time Variance Authority, but instead recruits a variant of Wolverine to save his universe from extinction.",
+    thumbnail: "/thumbnails/deadpool_wolverine.png",
+    backgroundImage: "./thumbnails/deadpool_wolverine_bg.png",
+    trailer: "73_1biulkYk"
+  },
   {
+    id: 18,
+    title: "Kung Fu Panda 4",
+    description: "This spring, Jack Black returns as Po, the world’s most unlikely kung fu master, in a hilarious, action-packed new chapter. After three epic adventures, Po, the Dragon Warrior, is called to step up as the Spiritual Leader of the Valley of Peace. But first, he must find and train a new Dragon Warrior to take his place.",
+    thumbnail: "/thumbnails/kungfupanda4.jpeg",
+    backgroundImage: "./thumbnails/kungfupanda4_bg.png",
+    trailer: "_inKs4eeHiI"
+  },
+ {
     id: 19,
     title: "Panda Plan",
     description: "When Jackie Chan is invited to adopt a beloved zoo panda named Hu Hu, a notorious crime syndicate sets a bounty on the bear. Jackie teams up with his agent and Hu Hu's devoted caretaker, embarking on an unforgettable adventure to outsmart and outfight the criminals at every turn.",
     thumbnail: "/thumbnails/pandaplan.jpeg",
     backgroundImage: "./thumbnails/pandaplan_bg.png",
     trailer: "ksls6lIiSPg"
-  }
+  },
   
 ];
