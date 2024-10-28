@@ -135,5 +135,12 @@ export const movies = [
     backgroundImage: "./thumbnails/deadpool_wolverine_bg.png",
     trailer: "73_1biulkYk"
   }
+    id: 16,
+    title: "Woman of the Hour",
+    description: "A tight true-crime thriller set against the backdrop of a cheesy television game show. This gripping narrative highlights just how strange truth can be, powered by stellar performances and a retro feel that reminds us of the value of modern DNA evidence.",
+    thumbnail: "/thumbnails/womanofthehour.jpeg",
+    backgroundImage: "./thumbnails/womanofthehour_bg.png",
+    trailer: "ODUdpwddTQk"
+  },
   
 ];
