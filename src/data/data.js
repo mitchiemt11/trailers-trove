@@ -127,4 +127,13 @@ export const movies = [
     backgroundImage: './thumbnails/antman_bg.png',
     trailer: 'ZlNFpri-Y40'
   },
+  {
+    id: 17,
+    title: "Deadpool & Wolverine",
+    description: "Deadpool is offered a place in the Marvel Cinematic Universe by the Time Variance Authority, but instead recruits a variant of Wolverine to save his universe from extinction.",
+    thumbnail: "/thumbnails/deadpool_wolverine.png",
+    backgroundImage: "./thumbnails/deadpool_wolverine_bg.png",
+    trailer: "73_1biulkYk"
+  }
+  
 ];
