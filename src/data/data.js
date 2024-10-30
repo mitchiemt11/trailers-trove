@@ -147,8 +147,8 @@ export const movies = [
     id: 18,
     title: "Kung Fu Panda 4",
     description: "This spring, Jack Black returns as Po, the world’s most unlikely kung fu master, in a hilarious, action-packed new chapter. After three epic adventures, Po, the Dragon Warrior, is called to step up as the Spiritual Leader of the Valley of Peace. But first, he must find and train a new Dragon Warrior to take his place.",
-    thumbnail: "/thumbnails/kungfupanda4.jpeg",
-    backgroundImage: "./thumbnails/kungfupanda4_bg.png",
+    thumbnail: "/thumbnails/kungfupanda4.png",
+    backgroundImage: "./thumbnails/kp4_b.jpg",
     trailer: "_inKs4eeHiI"
   },
  {
