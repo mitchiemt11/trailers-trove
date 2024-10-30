@@ -155,8 +155,8 @@ export const movies = [
     id: 19,
     title: "Panda Plan",
     description: "When Jackie Chan is invited to adopt a beloved zoo panda named Hu Hu, a notorious crime syndicate sets a bounty on the bear. Jackie teams up with his agent and Hu Hu's devoted caretaker, embarking on an unforgettable adventure to outsmart and outfight the criminals at every turn.",
-    thumbnail: "/thumbnails/pandaplan.jpeg",
-    backgroundImage: "./thumbnails/pandaplan_bg.png",
+    thumbnail: "/thumbnails/pandaplan.png",
+    backgroundImage: "./thumbnails/pplan.png",
     trailer: "ksls6lIiSPg"
   },
   
