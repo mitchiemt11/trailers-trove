@@ -6,6 +6,17 @@ import Landing from './components/Landing';
 import Header from './components/Header';
 import NoResults from './components/NoResults';
 
+// Constants
+const CONFETTI_DURATION = 4000;
+const YOUTUBE_OPTS = {
+  height: 500,
+  width: '100%',
+  playerVars: {
+    autoplay: 1,
+    controls: 0,
+  },
+};
+
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [filteredMovies, setFilteredMovies] = React.useState(movies);
