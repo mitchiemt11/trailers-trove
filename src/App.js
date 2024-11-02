@@ -18,15 +18,29 @@ const YOUTUBE_OPTS = {
 };
 
 function App() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [filteredMovies, setFilteredMovies] = React.useState(movies);
-  const [selectedMovie, setSelectedMovie] = React.useState({});
-  const [noResults, setNoResults] = React.useState(false);
-  const [playTrailer, setPlayTrailer] = React.useState(false);
-  const [showLanding, setShowLanding] = React.useState(true);
-  const [showConfetti, setShowConfetti] = React.useState(false);
+
+  const [appState, setAppState] = React.useState({
+    searchTerm: '',
+    filteredMovies: movies,
+    selectedMovie: movies[0] || {},
+    noResults: false,
+    playTrailer: false,
+    showLanding: true,
+    showConfetti: false,
+  });
+
 
   const playTrailerButtonRef = React.useRef(null);
+
+  const {
+    searchTerm,
+    filteredMovies,
+    selectedMovie,
+    noResults,
+    playTrailer,
+    showLanding,
+    showConfetti,
+  } = appState;
 
   const handleGetStarted = () => {
     setShowConfetti(true);
