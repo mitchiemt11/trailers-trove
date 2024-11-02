@@ -42,31 +42,49 @@ function App() {
     showConfetti,
   } = appState;
 
-  const handleGetStarted = () => {
-    setShowConfetti(true);
+  const handleGetStarted = React.useCallback(() => {
+    setAppState(prev => ({ ...prev, showConfetti: true }));
+    
     setTimeout(() => {
-      setShowConfetti(false);
-      setShowLanding(false);
-    }, 4000);
-  }
+      setAppState(prev => ({
+        ...prev,
+        showConfetti: false,
+        showLanding: false,
+      }));
+    }, CONFETTI_DURATION);
+  }, []);
 
-
-  const handleSearchTrailer = (event) => {
+  const handleSearchTrailer = React.useCallback((event) => {
     event.preventDefault();
-    // Filter movies based on the search term
     const filtered = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+      movie.title.toLowerCase().includes(appState.searchTerm.toLowerCase())
     );
-    setFilteredMovies(filtered);
-    setNoResults(filtered.length === 0);
-  };
+    
+    setAppState(prev => ({
+      ...prev,
+      filteredMovies: filtered,
+      noResults: filtered.length === 0,
+    }));
+  }, [appState.searchTerm]);
+
+  const handleSetSearchTerm = React.useCallback((term) => {
+    setAppState(prev => ({ ...prev, searchTerm: term }));
+  }, []);
+
+  const handleSelectMovie = React.useCallback((movie) => {
+    setAppState(prev => ({ ...prev, selectedMovie: movie }));
+  }, []);
+
+  const toggleTrailer = React.useCallback((value) => {
+    setAppState(prev => ({ ...prev, playTrailer: value }));
+  }, []);
 
   React.useEffect(() => {
     // Set the selected movie to the first movie when the component is mounted
     if (filteredMovies.length > 0) {
-      setSelectedMovie(filteredMovies[0]);
+      setAppState(prev => ({ ...prev, selectedMovie: filteredMovies[0] }));
     } else {
-      setSelectedMovie({});
+      setAppState(prev => ({ ...prev, selectedMovie: {} }));
     }
   }, [filteredMovies]);
 
