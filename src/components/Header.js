@@ -1,12 +1,31 @@
 import React from 'react';
 
-function Header({ onSearch, searchTerm, setSearchTerm }) {
+function Header({ onSearch, searchTerm, setSearchTerm, onClearSearch, showSearchActive, onGoHome }) {
   return (
-    <header className="text-white px-8 py-6">
+    <header className="text-white px-8 py-6 relative">
+      {/* Buttons positioned at the start (top-left) of the page */}
+      <div className="absolute left-4 top-4 flex items-center gap-3 z-20">
+        <button
+          onClick={onGoHome}
+          className="text-white bg-transparent border border-white/20 hover:bg-white/10 px-3 py-1 rounded-md"
+        >
+          Home
+        </button>
+        {showSearchActive ? (
+          <button
+            onClick={onClearSearch}
+            className="text-white bg-transparent border border-white/20 hover:bg-white/10 px-3 py-1 rounded-md"
+          >
+            Back
+          </button>
+        ) : null}
+      </div>
       <div className='flex justify-between items-center max-w-[1000px] ml-auto mr-auto '>
-        <div className='text-2xl'>Trailers Trove</div>
+        <div className='text-2xl'>
+          Trailers Trove
+        </div>
         <form onSubmit={onSearch}>
-          <label for="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
