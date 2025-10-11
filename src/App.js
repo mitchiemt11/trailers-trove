@@ -42,6 +42,8 @@ function App() {
     showConfetti,
   } = appState;
 
+  const showSearchActive = noResults || filteredMovies.length !== movies.length;
+
   const handleGetStarted = React.useCallback(() => {
     setAppState(prev => ({ ...prev, showConfetti: true }));
 
@@ -79,6 +81,30 @@ function App() {
     setAppState(prev => ({ ...prev, playTrailer: value }));
   }, []);
 
+  const handleClearSearch = React.useCallback(() => {
+    setAppState(prev => ({
+      ...prev,
+      searchTerm: '',
+      filteredMovies: movies,
+      selectedMovie: movies[0] || {},
+      noResults: false,
+    }));
+  }, []);
+
+  const handleGoHome = React.useCallback(() => {
+    // Return to landing screen and reset search/trailer state
+    setAppState(prev => ({
+      ...prev,
+      searchTerm: '',
+      filteredMovies: movies,
+      selectedMovie: movies[0] || {},
+      noResults: false,
+      playTrailer: false,
+      showLanding: true,
+      showConfetti: false,
+    }));
+  }, []);
+
   React.useEffect(() => {
     // Set the selected movie to the first movie when the component is mounted
     if (filteredMovies.length > 0) {
@@ -106,6 +132,9 @@ function App() {
         onSearch={handleSearchTrailer}
         searchTerm={searchTerm}
         setSearchTerm={handleSetSearchTerm}
+        onClearSearch={handleClearSearch}
+        showSearchActive={showSearchActive}
+        onGoHome={handleGoHome}
       />
       <div
         className="relative min-h-[500px] bg-top flex items-end bg-cover"
