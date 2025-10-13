@@ -152,15 +152,15 @@ function App() {
             </button>
           )}
 
-          {selectedMovie.trailer && playTrailer && renderTrailer()}
-
-          <button
-            ref={playTrailerButtonRef}
-            onClick={() => toggleTrailer(true)}
-            className="inline-flex items-center justify-center px-5 py-3 text-[1.2rem] font-medium text-white bg-[#000030] rounded-lg hover:bg-[#001330cf] border-solid border-[#000030]"
-          >
-            Watch Trailer
-          </button>
+          {selectedMovie.trailer && (
+            <button
+              ref={playTrailerButtonRef}
+              onClick={() => toggleTrailer(true)}
+              className="inline-flex items-center justify-center px-5 py-3 text-[1.2rem] font-medium text-white bg-[#000030] rounded-lg hover:bg-[#001330cf] border-solid border-[#000030]"
+            >
+              Watch Trailer
+            </button>
+          )}
 
           <h1 className="text-[aliceblue] text-[3rem]">{selectedMovie.title}</h1>
           <p className="text-[aliceblue] text-[1.3] font-medium">
