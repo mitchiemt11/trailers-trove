@@ -1,199 +1,171 @@
-import React from 'react';
-import { movies } from './data/data';
-import MovieCard from './components/MovieCard';
-import YouTube from 'react-youtube';
-import Landing from './components/Landing';
-import Header from './components/Header';
-import NoResults from './components/NoResults';
-
-// Constants
-const CONFETTI_DURATION = 4000;
-const YOUTUBE_OPTS = {
-  height: 500,
-  width: '100%',
-  playerVars: {
-    autoplay: 1,
-    controls: 0,
-  },
-};
+import React, { useState, useEffect } from "react";
+import { movies } from "./data/data";
+import MovieCard from "./components/MovieCard";
+import YouTube from "react-youtube";
+import Landing from "./components/Landing";
+import Header from "./components/Header";
+import NoResults from "./components/NoResults";
 
 function App() {
-
-  const [appState, setAppState] = React.useState({
-    searchTerm: '',
-    filteredMovies: movies,
-    selectedMovie: movies[0] || {},
-    noResults: false,
-    playTrailer: false,
-    showLanding: true,
-    showConfetti: false,
-  });
-
-
-  const playTrailerButtonRef = React.useRef(null);
-
-  const {
-    searchTerm,
-    filteredMovies,
-    selectedMovie,
-    noResults,
-    playTrailer,
-    showLanding,
-    showConfetti,
-  } = appState;
+  // Simple separate state for each thing
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredMovies, setFilteredMovies] = useState(movies);
+  const [selectedMovie, setSelectedMovie] = useState(movies[0] || {});
+  const [noResults, setNoResults] = useState(false);
+  const [playTrailer, setPlayTrailer] = useState(false);
+  const [showLanding, setShowLanding] = useState(true);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const showSearchActive = noResults || filteredMovies.length !== movies.length;
 
-  const handleGetStarted = React.useCallback(() => {
-    setAppState(prev => ({ ...prev, showConfetti: true }));
-
+  // Handle Get Started button click
+  function handleGetStarted() {
+    setShowConfetti(true);
     setTimeout(() => {
-      setAppState(prev => ({
-        ...prev,
-        showConfetti: false,
-        showLanding: false,
-      }));
-    }, CONFETTI_DURATION);
-  }, []);
+      setShowConfetti(false);
+      setShowLanding(false);
+    }, 4000);
+  }
 
-  const handleSearchTrailer = React.useCallback((event) => {
+  // Handle search
+  function handleSearchTrailer(event) {
     event.preventDefault();
     const filtered = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(appState.searchTerm.toLowerCase())
+      movie.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
+    setFilteredMovies(filtered);
+    setNoResults(filtered.length === 0);
+  }
 
-    setAppState(prev => ({
-      ...prev,
-      filteredMovies: filtered,
-      noResults: filtered.length === 0,
-    }));
-  }, [appState.searchTerm]);
+  // Handle movie selection
+  function handleSelectMovie(movie) {
+    setSelectedMovie(movie);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
-  const handleSetSearchTerm = React.useCallback((term) => {
-    setAppState(prev => ({ ...prev, searchTerm: term }));
-  }, []);
+  // Clear search and go back
+  function handleClearSearch() {
+    setSearchTerm("");
+    setFilteredMovies(movies);
+    setSelectedMovie(movies[0] || {});
+    setNoResults(false);
+  }
 
-  const handleSelectMovie = React.useCallback((movie) => {
-    setAppState(prev => ({ ...prev, selectedMovie: movie }));
-  }, []);
+  // Go back to landing page
+  function handleGoHome() {
+    setSearchTerm("");
+    setFilteredMovies(movies);
+    setSelectedMovie(movies[0] || {});
+    setNoResults(false);
+    setPlayTrailer(false);
+    setShowLanding(true);
+    setShowConfetti(false);
+  }
 
-  const toggleTrailer = React.useCallback((value) => {
-    setAppState(prev => ({ ...prev, playTrailer: value }));
-  }, []);
-
-  const handleClearSearch = React.useCallback(() => {
-    setAppState(prev => ({
-      ...prev,
-      searchTerm: '',
-      filteredMovies: movies,
-      selectedMovie: movies[0] || {},
-      noResults: false,
-    }));
-  }, []);
-
-  const handleGoHome = React.useCallback(() => {
-    // Return to landing screen and reset search/trailer state
-    setAppState(prev => ({
-      ...prev,
-      searchTerm: '',
-      filteredMovies: movies,
-      selectedMovie: movies[0] || {},
-      noResults: false,
-      playTrailer: false,
-      showLanding: true,
-      showConfetti: false,
-    }));
-  }, []);
-
-  React.useEffect(() => {
-    // Set the selected movie to the first movie when the component is mounted
+  // Update selected movie when filtered list changes
+  useEffect(() => {
     if (filteredMovies.length > 0) {
-      setAppState(prev => ({ ...prev, selectedMovie: filteredMovies[0] }));
+      setSelectedMovie(filteredMovies[0]);
     } else {
-      setAppState(prev => ({ ...prev, selectedMovie: {} }));
+      setSelectedMovie({});
     }
   }, [filteredMovies]);
 
-  const renderTrailer = () => (
-    <div className="absolute inset-0 w-full h-full">
-      <YouTube
-        videoId={selectedMovie.trailer}
-        opts={YOUTUBE_OPTS}
-        className="absolute inset-0 w-full h-full"
-        onEnd={() => toggleTrailer(false)}
-      />
-    </div>
-  );
+  // Show landing page
+  if (showLanding) {
+    return (
+      <div className="min-h-screen bg-[#000020] text-white">
+        <Landing handleGetStarted={handleGetStarted} showConfetti={showConfetti} />
+      </div>
+    );
+  }
 
-
-  const renderMovieContent = () => (
-    <>
+  // Show main app
+  return (
+    <div className="min-h-screen bg-[#000020] text-white">
       <Header
         onSearch={handleSearchTrailer}
         searchTerm={searchTerm}
-        setSearchTerm={handleSetSearchTerm}
+        setSearchTerm={setSearchTerm}
         onClearSearch={handleClearSearch}
         showSearchActive={showSearchActive}
         onGoHome={handleGoHome}
       />
+
+      {/* Movie Background Section */}
       <div
-        className="relative min-h-[500px] bg-top flex items-end bg-cover"
+        className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[85vh] flex flex-col justify-end bg-black"
         style={{
-          backgroundImage: `url(${selectedMovie.backgroundImage || './thumbnails/po.jpeg'})`
+          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${
+            selectedMovie.backgroundImage || "./thumbnails/po.jpeg"
+          })`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'top center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="pb-[60px] max-w-[1000px] mx-auto">
-          {playTrailer && (
-            <button
-              className="bg-[#000030] hover:bg-red-700 border-solid border-[#000030] text-white px-5 py-2 text-[1.2rem] mt-4 mb-2 rounded-lg absolute z-10 left-[30px] bottom-[30px]"
-              onClick={() => toggleTrailer(false)}
-            >
-              Close
-            </button>
-          )}
-
-          {selectedMovie.trailer && (
-            <button
-              ref={playTrailerButtonRef}
-              onClick={() => toggleTrailer(true)}
-              className="inline-flex items-center justify-center px-5 py-3 text-[1.2rem] font-medium text-white bg-[#000030] rounded-lg hover:bg-[#001330cf] border-solid border-[#000030]"
-            >
-              Watch Trailer
-            </button>
-          )}
-
-          <h1 className="text-[aliceblue] text-[3rem]">{selectedMovie.title}</h1>
-          <p className="text-[aliceblue] text-[1.3] font-medium">
+        <div className="max-w-[1200px] mx-auto pb-[70px] px-6 text-white relative z-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg mb-4">
+            {selectedMovie.title}
+          </h1>
+          <p className="mt-3 text-base sm:text-lg lg:text-xl text-gray-200 max-w-3xl leading-relaxed">
             {selectedMovie.description}
           </p>
+
+          {selectedMovie.trailer && !playTrailer && (
+            <button
+              onClick={() => setPlayTrailer(true)}
+              className="mt-6 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
+            >
+              ▶ Watch Trailer
+            </button>
+          )}
+
+          {playTrailer && (
+            <button
+              onClick={() => setPlayTrailer(false)}
+              className="absolute left-5 bottom-5 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold shadow-md z-20"
+            >
+              ✖ Close
+            </button>
+          )}
         </div>
+
+        {/* Trailer Player */}
+        {playTrailer && (
+          <div className="absolute inset-0 w-full h-full bg-black">
+            <YouTube
+              videoId={selectedMovie.trailer}
+              opts={{
+                height: 500,
+                width: "100%",
+                playerVars: {
+                  autoplay: 1,
+                  controls: 0,
+                },
+              }}
+              className="absolute inset-0 w-full h-full"
+              onEnd={() => setPlayTrailer(false)}
+            />
+          </div>
+        )}
       </div>
 
+      {/* Movie Grid */}
       {noResults ? (
         <NoResults />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] p-[25px] max-w-[1000px] mx-auto">
-          {filteredMovies.map((movie) => (
-            <MovieCard
-              key={movie.id || movie.title}
-              movie={movie}
-              setSelectedMovie={handleSelectMovie}
-            />
-          ))}
+        <div className="px-6 py-8 bg-gradient-to-b from-[#000020] to-[#000040]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
+            {filteredMovies.map((movie) => (
+              <MovieCard
+                key={movie.id || movie.title}
+                movie={movie}
+                setSelectedMovie={handleSelectMovie}
+              />
+            ))}
+          </div>
         </div>
-      )}
-    </>
-  );
-
-  return (
-    <div className="min-h-screen">
-      {showLanding ? (
-        <Landing
-          handleGetStarted={handleGetStarted}
-          showConfetti={showConfetti}
-        />
-      ) : (
-        renderMovieContent()
       )}
     </div>
   );
