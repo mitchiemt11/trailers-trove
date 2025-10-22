@@ -1,53 +1,55 @@
-import React from 'react';
+import React from "react";
 
 function Header({ onSearch, searchTerm, setSearchTerm, onClearSearch, showSearchActive, onGoHome }) {
   return (
-    <header className="text-white px-8 py-6 relative">
-      {/* Buttons positioned at the start (top-left) of the page */}
-      <div className="absolute left-4 top-4 flex items-center gap-3 z-20">
-        <button
-          onClick={onGoHome}
-          className="text-white bg-transparent border border-white/20 hover:bg-white/10 px-3 py-1 rounded-md"
-        >
-          Home
-        </button>
-        {showSearchActive ? (
-          <button
-            onClick={onClearSearch}
-            className="text-white bg-transparent border border-white/20 hover:bg-white/10 px-3 py-1 rounded-md"
-          >
-            Back
-          </button>
-        ) : null}
-      </div>
-      <div className='flex justify-between items-center max-w-[1000px] ml-auto mr-auto '>
-        <div className='text-2xl'>
-          Trailers Trove
-        </div>
-        <form onSubmit={onSearch}>
-          <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-          <div className="relative">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 shadow-lg border-b border-blue-700/50 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          {/* Left: Logo & Navigation */}
+          <div className="flex items-center gap-6">
+            <div className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              🍿 Trailers Trove
             </div>
-            <input
-              type="search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              id="search"
-              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Search"
-            />
-            <button
-              type="submit"
-              className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Search
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={onGoHome}
+                className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-200"
+              >
+                🏠 Home
+              </button>
+              {showSearchActive && (
+                <button
+                  onClick={onClearSearch}
+                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-200"
+                >
+                  ← Back
+                </button>
+              )}
+            </div>
           </div>
-        </form>
+
+          {/* Right: Search Form */}
+          <form onSubmit={onSearch} className="relative w-full max-w-md">
+            <div className="relative">
+              <input
+                type="search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search for movies..."
+                className="w-full pl-12 pr-24 py-3 text-sm text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent hover:bg-white/20 transition-all duration-200"
+              />
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-300">
+                🔍
+              </div>
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-5 py-1.5 rounded-full font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
   );

@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const NoResults = () => {
+function NoResults() {
   return (
-    <div className="text-center text-[2rem] mt-[50px]">
-      <p>Oops!, No results found</p>
+    <div className="flex flex-col items-center justify-center h-[60vh] text-center">
+      <p className="text-2xl md:text-3xl font-semibold text-white">
+        Oops! No results found 🎬
+      </p>
+      <p className="text-gray-400 mt-2 max-w-md">
+        Try searching with a different keyword — we couldn't find any matches.
+      </p>
     </div>
-  )
+  );
 }
 
-export default NoResults
+export default NoResults;
