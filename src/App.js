@@ -104,15 +104,18 @@ function App() {
           backgroundRepeat: 'no-repeat',
         }}
       >
+        {/* No Results Overlay */}
+        {noResults && <NoResults />}
+
         <div className="max-w-[1200px] mx-auto pb-[70px] px-6 text-white relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg mb-4">
-            {selectedMovie.title}
+            {selectedMovie.title || "Search for Movies"}
           </h1>
           <p className="mt-3 text-base sm:text-lg lg:text-xl text-gray-200 max-w-3xl leading-relaxed">
-            {selectedMovie.description}
+            {selectedMovie.description || "Use the search bar above to find movie trailers"}
           </p>
 
-          {selectedMovie.trailer && !playTrailer && (
+          {selectedMovie.trailer && !playTrailer && !noResults && (
             <button
               onClick={() => setPlayTrailer(true)}
               className="mt-6 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
@@ -152,9 +155,7 @@ function App() {
       </div>
 
       {/* Movie Grid */}
-      {noResults ? (
-        <NoResults />
-      ) : (
+      {!noResults && (
         <div className="px-6 py-8 bg-gradient-to-b from-[#000020] to-[#000040]">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
             {filteredMovies.map((movie) => (
