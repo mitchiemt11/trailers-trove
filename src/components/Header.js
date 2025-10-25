@@ -8,7 +8,7 @@ function Header({ onSearch, searchTerm, setSearchTerm, onClearSearch, showSearch
           {/* Left: Logo & Navigation */}
           <div className="flex items-center gap-6">
             <div className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              🍿 Trailers Trove
+              Trailers Trove
             </div>
             <div className="flex items-center gap-3">
               <button
@@ -35,7 +35,7 @@ function Header({ onSearch, searchTerm, setSearchTerm, onClearSearch, showSearch
                 type="search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search for movies..."
+                placeholder="Search for movie trailers..."
                 className="w-full pl-12 pr-24 py-3 text-sm text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent hover:bg-white/20 transition-all duration-200"
               />
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-300">
