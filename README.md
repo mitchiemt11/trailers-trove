@@ -7,9 +7,11 @@ Trailers Trove, designed to provide users with access to the latest and most exc
 
 ![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/bef47c46-adb0-4384-ae07-4de26f009d03)
 
-![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/5b5b301e-d036-4e97-8622-2dcf03f1a913)
+<img width="1940" height="977" alt="image" src="https://github.com/user-attachments/assets/9f19f729-a399-4ca2-a15d-fc217465aa36" />
 
-![image](https://github.com/mitchiemt11/trailers-trove/assets/74592107/042696ae-8643-4c76-9381-9e769211ce9e)
+
+<img width="1916" height="984" alt="image" src="https://github.com/user-attachments/assets/b15940fa-9160-4be7-a259-e14b35a1ffd7" />
+
 
 
 
