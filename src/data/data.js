@@ -159,5 +159,13 @@ export const movies = [
     backgroundImage: "./thumbnails/pplan.png",
     trailer: "ksls6lIiSPg"
   },
+  {
+    id: 20,
+    title: "Napoleon",
+    description: "An epic historical drama that chronicles the rise and fall of French military leader Napoleon Bonaparte, following his origins and his swift, ruthless climb to emperor through the lens of his addictive and volatile relationship with Josephine.",
+    thumbnail: '/thumbnails/napoleon_p.png',
+    backgroundImage: './thumbnails/napoleon_b.png',
+    trailer: 'OAZWXUkrjPc'
+  }
   
 ];
