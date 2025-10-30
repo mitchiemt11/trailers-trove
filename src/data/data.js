@@ -166,6 +166,14 @@ export const movies = [
     thumbnail: '/thumbnails/napoleon_p.png',
     backgroundImage: './thumbnails/napoleon_b.png',
     trailer: 'OAZWXUkrjPc'
-  }
-  
+  },
+  {
+    id: 21,
+    title: "Oppenheimer",
+    description:
+      "A biographical drama chronicling the life of J. Robert Oppenheimer and his role leading the Manhattan Project and the moral consequences that followed.",
+    thumbnail: "/thumbnails/oppenheimer_p.png",
+    backgroundImage: "./thumbnails/oppenheimer_b.png",
+    trailer: "bK6ldnjE3Y0",
+  },
 ];
